@@ -1,0 +1,52 @@
+.remind-item {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
+    margin: 0.5rem 0;
+
+    .close-btn {
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 0;
+        background-color: transparent;
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            background-color: #fff;
+            width: 20px;
+            height: 3px;
+            top: 50%;
+            left: 0;
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            background-color: #fff;
+            width: 20px;
+            height: 3px;
+            top: 50%;
+            left: 0;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.success {
+    background-color: #2ed573;
+    color: #fff;
+}
+
+.danger {
+    background-color: #e55039;
+    color: #fff;
+}

@@ -5,9 +5,10 @@ import Progress from './Progress'
 import './index.scss'
 
 export default function Dashboard() {
+    //redux
     const dispatch = useDispatch();
     const todos = useSelector(state => state.todos);
-
+    //total tasks, and has finished tasks
     const total = todos.length;
     const hasDone = todos.filter(el => el.isFinish).length;
 

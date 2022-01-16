@@ -13,7 +13,7 @@ export default function List() {
 
     useEffect(() => {
         //initialize todos data from local storage
-        const data = JSON.parse(localStorage.getItem('todos'));
+        const data = JSON.parse(localStorage.getItem('todos')) || [];
         dispatch(initialByLocal(data));
         //customize list section's height in every single advice
         const {offsetTop} = list.current;
@@ -24,7 +24,7 @@ export default function List() {
         <div ref={list} className='list'>
             {
                 todos.length > 0 ? 
-                todos.map((el, index) => {
+                todos.map(el => {
                     const {id} = el;
                     return (
                         <ListItem key={id} task={el} />

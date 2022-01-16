@@ -10,13 +10,13 @@ export const todosSlice = createSlice({
             const { payload } = actions;
             return [payload, ...state];
         },
-
+        //delete target with certain index
         deleteTask: (state, actions) => {
             const id = actions.payload;
             const newArr = state.filter(el => el.id !== id);
             return [...newArr];
         },
-
+        //change isFinish status
         setStatus: (state, actions) => {
             const { id, time } = actions.payload;
             
@@ -35,12 +35,12 @@ export const todosSlice = createSlice({
 
             return state;
         },
-
+        //if there is data in local side, than initialize by local storage
         initialByLocal: (state, actions) => {
             const { payload } = actions;
             return [...payload];
         },
-
+        //clear all
         clearTask: (state, actions) => {
             return INIT
         }

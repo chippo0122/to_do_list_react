@@ -15,6 +15,7 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        z-index: 1;
 
         input {
             position: absolute;
@@ -33,6 +34,7 @@
             transform: translateY(-50%);
             background-color: #ddd;
             transition: 0.3s;
+            z-index: 1 !important;
 
             &:after {
                 content: "";

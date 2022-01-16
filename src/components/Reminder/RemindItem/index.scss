@@ -1,11 +1,13 @@
 .remind-item {
     display: flex;
+    position: relative;
     justify-content: space-between;
     width: 180px;
     align-items: center;
     background-color: #fff;
     padding: 10px 15px;
     margin: 0.5rem 0;
+    z-index: 99 !important;
 
     .close-btn {
         display: block;

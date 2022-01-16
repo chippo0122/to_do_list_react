@@ -15,7 +15,7 @@ export default function Dashboard() {
     const clearAllTask = () => {
         //clear redux
         dispatch(clearTask());
-        dispatch(pushMsg({title: '已清空所有代辦事項', success: false}));
+        dispatch(pushMsg({title: '已清空所有待辦事項', success: false}));
         //clear localstorage
         localStorage.setItem('todos', JSON.stringify([]));
     }

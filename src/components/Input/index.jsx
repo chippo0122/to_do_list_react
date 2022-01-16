@@ -31,19 +31,19 @@ export default function Input() {
         }
         //add task into local storage
         const local = JSON.parse(localStorage.getItem('todos')) || [];
-        local.push(data);
+        local.unshift(data);
         localStorage.setItem('todos', JSON.stringify(local));
         //add task into todos list
         dispatch(pushTask(data));
         //spread message to reminder component
-        dispatch(pushMsg({title: '已加入代辦清單', success: true}));
+        dispatch(pushMsg({title: '已加入待辦清單', success: true}));
         //clear input
         insertInput.current.value = ''
     }
 
     return (
         <div className='insert-section'>
-            <input ref={insertInput} className='insert-input text-light' type="text" placeholder='請輸入代辦事項' />
+            <input ref={insertInput} className='insert-input text-light' type="text" placeholder='請輸入待辦事項' />
             <button onClick={setInput} className='insert-btn bg-primary text-light'>加入</button>
         </div>
     )

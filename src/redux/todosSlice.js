@@ -30,7 +30,6 @@ export const todosSlice = createSlice({
                         el.finishAt = time;
                     }
                 }
-                return el
             })
 
             return state;

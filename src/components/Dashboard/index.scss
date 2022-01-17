@@ -3,8 +3,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    outline: 1px solid #ff7600;
+    border: 1px solid #ff7600;
     border-radius: 30px;
+    position: relative;
+    transform: rotate(0deg);
+    z-index: 0;
     overflow: hidden;
 
     .progress {
@@ -26,6 +29,8 @@
             top: 0;
             background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.3), transparent);
             animation: loading infinite ease 1.5s;
+            -webkit-animation: loading infinite ease 1.5s;
+            -moz-animation: loading infinite ease 1.5s;
         }
 
         .progress-info {
@@ -76,15 +81,19 @@
 
     @keyframes loading {
         0% {
-            transform: translateX(-100%);
+          transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);
+          -moz-transform: translateX(-100%);
         }
-
         50% {
-            transform: translateX(0%);
+          transform: translateX(0%);
+          -webkit-transform: translateX(0%);
+          -moz-transform: translateX(0%);
         }
-
         100% {
-            transform: translateX(100%);
+          transform: translateX(100%);
+          -webkit-transform: translateX(100%);
+          -moz-transform: translateX(100%);
         }
-    }
+      }
 }
